@@ -7,11 +7,11 @@ global.console = {
 describe('Tests for checking the value returned by the promise', () => {
   test('Verify I FIRED is printed to the console on reject by the promise', () => {
     expect.assertions(1);
-    return expect(multiPromise).rejects.toEqual(new Error('I FIRED'));
+    return expect(multiPromise).resolves.toBe('I FIRED');
   });
   test('Verify REJECTED! is printed to the console on reject by the promise', () => {
     expect.assertions(1);
-    return expect(multiPromise).rejects.toNotEqual(new Error('I DID NOT FIRE'));
+    return expect(multiPromise).rejects.toBeNull();
   });
 });
 
