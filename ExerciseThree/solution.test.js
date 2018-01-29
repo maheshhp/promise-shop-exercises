@@ -7,11 +7,7 @@ global.console = {
 describe('Tests for checking the value returned by the promise', () => {
   test('Verify REJECTED! is printed to the console on reject by the promise', () => {
     expect.assertions(1);
-    return expect(promiseToReject).rejects.toBe('REJECTED!');
-  });
-  test('Verify that nothing is resolved by the promise', () => {
-    expect.assertions(1);
-    return expect(promiseToReject).resolves.toBe(null);
+    return expect(promiseToReject).rejects.toEqual(new Error('REJECTED!'));
   });
 });
 
