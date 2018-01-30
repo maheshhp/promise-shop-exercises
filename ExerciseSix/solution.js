@@ -1,5 +1,3 @@
-
-
 let promiseOne = Promise.resolve('SECRET VALUE');
 
 
@@ -9,4 +7,7 @@ let promiseTwo = new Promise(((fulfill, reject) => {
 
 let promiseThree = Promise.reject(new Error('ONE MORE SECRET VALUE'));
 
-module.exports = { promiseOne, promiseTwo, promiseThree };
+promiseOne.then(console.log);
+promiseTwo.catch(console.log);
+promiseThree.then(console.log, console.log);
+// module.exports = { promiseOne, promiseTwo, promiseThree };
