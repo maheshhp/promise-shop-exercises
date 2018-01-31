@@ -1,4 +1,6 @@
-let alwaysThrows = () => { };
+let alwaysThrows = () => {
+  throw new Error('OH NOES');
+};
 
 let iterate = (argOne) => { };
 
