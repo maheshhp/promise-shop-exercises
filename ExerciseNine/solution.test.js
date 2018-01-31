@@ -1,6 +1,5 @@
 const { parsePromised } = require('./solution');
 
-
 describe('Test for checking the parsed JSON and error logged by the promise', () => {
   test('Verify parsePromised resolves to the JSON supplied being parsed', () => {
     let validJson = JSON.stringify({ name: 'John', age: 31, city: 'New York' });
